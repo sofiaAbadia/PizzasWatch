@@ -15,6 +15,7 @@ class VistaIngredientes: WKInterfaceController {
     var actual : DatosPizza?
     var num = 0
     @IBOutlet weak var maximoL: WKInterfaceLabel!
+    @IBOutlet weak var seleccioneL: WKInterfaceLabel!
     
     @IBAction func hayJamon(_ value: Bool) {
         if(num < 5)
@@ -121,7 +122,12 @@ class VistaIngredientes: WKInterfaceController {
     }
     
     @IBAction func pedirPizza() {
-        pushController(withName: "Orden", context: actual)
+        for ingredient in actual!.ingredientes {
+            if ingredient.value {
+                pushController(withName: "Orden", context: actual)
+            }
+        }
+        seleccioneL.setHidden(false)
     }
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -129,6 +135,7 @@ class VistaIngredientes: WKInterfaceController {
         let queso = actual!.queso
         print(queso!)
         maximoL.setHidden(true)
+        seleccioneL.setHidden(true)
         // Configure interface objects here.
     }
 

@@ -151,6 +151,7 @@
                                 <action selector="hayPimiento:" destination="5oC-F8-5qE" id="lzk-RP-PsK"/>
                             </connections>
                         </switch>
+                        <label width="1" alignment="left" text="Seleccione uno" textAlignment="center" id="WiD-4w-eIV"/>
                         <button width="1" alignment="left" title="Continuar" id="fhz-XR-W6f">
                             <connections>
                                 <action selector="pedirPizza" destination="5oC-F8-5qE" id="e1V-xC-ZJf"/>
@@ -159,10 +160,11 @@
                     </items>
                     <connections>
                         <outlet property="maximoL" destination="O9O-jm-rSx" id="8WG-W9-g8i"/>
+                        <outlet property="seleccioneL" destination="WiD-4w-eIV" id="vDP-nW-Wzy"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1032" y="475"/>
+            <point key="canvasLocation" x="1032" y="472.5"/>
         </scene>
         <!--Orden-->
         <scene sceneID="qFV-9s-27S">
